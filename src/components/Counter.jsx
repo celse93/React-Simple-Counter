@@ -11,9 +11,7 @@ export const Counter = (props) => {
           justifyContent: "center",
         }}
       >
-        <Typography 
-          variant="h4" 
-          gutterBottom>
+        <Typography variant="h4" gutterBottom>
           <TimerOutlinedIcon color="primary" /> Simple Counter
         </Typography>
       </Box>
@@ -23,10 +21,7 @@ export const Counter = (props) => {
           justifyContent: "center",
         }}
       >
-        <Typography 
-          variant="h3" 
-          gutterBottom 
-          color="primary">
+        <Typography variant="h3" gutterBottom color="primary">
           {props.seconds}
         </Typography>
       </Box>
@@ -34,6 +29,7 @@ export const Counter = (props) => {
         sx={{
           display: "flex",
           justifyContent: "center",
+          mb: "10px",
         }}
       >
         <Button
@@ -52,10 +48,7 @@ export const Counter = (props) => {
         >
           Stop
         </Button>
-        <Button 
-          sx={{ mx: "10px" }} 
-          onClick={props.reset} 
-          variant="outlined">
+        <Button sx={{ mx: "10px" }} onClick={props.reset} variant="outlined">
           Reset
         </Button>
       </Box>
@@ -65,12 +58,7 @@ export const Counter = (props) => {
           justifyContent: "center",
         }}
       >
-        <TextField
-          onBlur={props.input}
-          id="input-countdown"
-          label="Countdown"
-          variant="standard"
-        />
+        <TextField id="input-countdown" label="Countdown" variant="standard" />
       </Box>
       <Box
         sx={{
@@ -78,10 +66,12 @@ export const Counter = (props) => {
           justifyContent: "center",
         }}
       >
-        <TextField 
-          id="input-alert" 
-          label="Alert" 
-          variant="standard" />
+        <TextField
+          id="input-alert"
+          label="Alert"
+          variant="standard"
+          sx={{ mt: "5px" }}
+        />
       </Box>
     </Box>
   );
